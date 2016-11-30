@@ -4,9 +4,15 @@
 # declaration at the top                                              #
 #######################################################################
 
+import sys
+if ".." not in sys.path:
+    sys.path.insert(0,"..")
+
 import numpy as np
 from utils import *
 import matplotlib.pyplot as plt
+
+plt.style.use('ggplot')
 
 # goal
 GOAL = 100
