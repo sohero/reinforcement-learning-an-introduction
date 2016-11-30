@@ -15,6 +15,8 @@ from mpl_toolkits.mplot3d import Axes3D
 from utils import *
 from math import *
 
+plt.style.use('ggplot')
+
 # maximum # of cars in each location
 MAX_CARS = 20
 
