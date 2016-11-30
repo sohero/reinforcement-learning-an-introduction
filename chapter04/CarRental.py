@@ -5,6 +5,9 @@
 # Permission given to modify the code as long as you keep this        #
 # declaration at the top                                              #
 #######################################################################
+import sys
+if ".." not in sys.path:
+    sys.path.insert(0,"..")
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -154,7 +157,7 @@ policyImprovementInd = 0
 while True:
     if improvePolicy == True:
         # start policy improvement
-        print 'Policy improvement', policyImprovementInd
+        print('Policy improvement', policyImprovementInd)
         policyImprovementInd += 1
         newPolicy = np.zeros((MAX_CARS + 1, MAX_CARS + 1))
         for i, j in states:
@@ -170,7 +173,7 @@ while True:
 
         # if policy is stable
         policyChanges = np.sum(newPolicy != policy)
-        print 'Policy for', policyChanges, 'states changed'
+        print('Policy for', policyChanges, 'states changed')
         if policyChanges == 0:
             policy = newPolicy
             break

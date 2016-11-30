@@ -4,5 +4,5 @@
 # declaration at the top                                              #
 #######################################################################
 
-from utils import *
-from TileCoding import *
+from .utils import *
+from .TileCoding import *
